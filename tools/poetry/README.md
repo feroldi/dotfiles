@@ -34,3 +34,5 @@ Where:
 
 * `$SOURCE_NAME` is the name configured under `[[tool.poetry.source]]`
 * `$PYPI_USERNAME` and `$PYPI_PASSWORD` are username and password for your private pypi server.
+
+Source for this solution: https://github.com/python-poetry/poetry/issues/3216#issuecomment-737878344
