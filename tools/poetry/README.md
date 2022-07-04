@@ -12,7 +12,7 @@ Basically, do the following:
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 ```
 
-It is recommended that you also install [`pyenv`](/tools/poetry/README.md) and `direnv` to work with `poetry`.
+It is recommended that you also install [`pyenv`](/tools/pyenv/README.md) and `direnv` to work with `poetry`.
 
 TODO: Link direnv to its dotfiles documentation.
 
