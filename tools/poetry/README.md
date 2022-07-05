@@ -4,12 +4,10 @@
 
 ## Install
 
-Go to the online documentation on how to install `poetry` ([link][poetry-install]).
-
-Basically, do the following:
+Go to the online documentation on how to install `poetry` ([link][poetry-install]), or run the following command to automatically download and install it for Linux:
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+./install-on-linux.sh
 ```
 
 It is recommended that you also install [`pyenv`](/tools/pyenv/README.md) and `direnv` to work with `poetry`.

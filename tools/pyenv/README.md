@@ -4,18 +4,13 @@
 
 ## Install
 
-Go to the online documentation on GitHub on how to install `pyenv` ([link][pyenv-install]).
-
-The following commands work most of the time for `bash` in most Linux distributions:
+Go to the online documentation on GitHub on how to install `pyenv` ([link][pyenv-install]), or run the following command to automatically download and install it:
 
 ```bash
-git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-cd ~/.pyenv && src/configure && make -C src
-
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.profile
-echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.profile
-echo 'eval "$(pyenv init -)"' >> ~/.profile
+./install-on-linux.sh
 ```
+
+It works most of the time for `bash` in most Linux distributions.
 
 You may need to install some Python build environment packages before setting up a new Python version through `pyenv`:
 
@@ -40,13 +35,13 @@ For other systems, access `pyenv` documentation on GitHub ([link][pyenv-build-en
 
 ## Set up a global Python version
 
-Run the following to set up any version you want:
+Run the following to globally set up some version for your system:
 
 ```bash
 pyenv global <version>
 ```
 
-If you want a different version for some specific directory, then do this:
+If you want a different version for some specific directory, then `cd` into its path, and run this:
 
 ```bash
 pyenv local <version>
