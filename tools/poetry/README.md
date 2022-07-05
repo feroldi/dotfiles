@@ -10,9 +10,7 @@ Go to the online documentation on how to install `poetry` ([link][poetry-install
 ./install-on-linux.sh
 ```
 
-It is recommended that you also install [`pyenv`](/tools/pyenv/README.md) and `direnv` to work with `poetry`.
-
-TODO: Link direnv to its dotfiles documentation.
+It is recommended that you also install [`pyenv`](/tools/pyenv/README.md) and [`direnv`](/tools/direnv/README.md) to work with `poetry`.
 
 [poetry-install]: https://python-poetry.org/docs/#installation
 
