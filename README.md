@@ -8,3 +8,4 @@ Here, you may find documentation for OS and software installation, as well as tr
 
 * [`poetry`](/tools/poetry/README.md)
 * [`pyenv`](/tools/pyenv/README.md)
+* [`direnv`](/tools/direnv/README.md)
