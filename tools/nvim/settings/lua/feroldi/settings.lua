@@ -34,6 +34,7 @@ vim.opt.incsearch = true
 
 vim.opt.background = "dark"
 vim.cmd.colorscheme("jellybeans-feroldi")
+vim.api.nvim_set_hl(0, "Pmenu", { cterm=None, ctermbg=None, gui=None, guibg=None })
 
 -- Ignore files neovim doesn't use.
 vim.opt.wildignore = (
