@@ -18,11 +18,16 @@ ensure_has_commands() {
 }
 
 install_package() {
-    package=$1
+    packages=$@
     if has_command pacman; then
-        sudo pacman -s $package
+        packages_to_install=""
+        for package in $packages; do
+            pacman -Qi $package || packages_to_install="$packages_to_install $package"
+        done
+
+        [ -n "$packages_to_install" ] && sudo pacman -S $packages_to_install
     elif has_command apt-get; then
-        sudo apt-get install $package
+        sudo apt-get install $packages
     else
         return 1
     fi
