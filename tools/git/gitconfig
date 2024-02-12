@@ -1,11 +1,11 @@
 [user]
 	name = Mário Feroldi
 	email = mferoldif@gmail.com
-	signingkey = MISSING
+	signingkey = BDBF6B621823D5EB
 [credential]
 	helper = cache --timeout=28800
 [gpg]
-	program = gpg2
+	program = gpg
 [rerere]
 	enabled = true
 [commit]
