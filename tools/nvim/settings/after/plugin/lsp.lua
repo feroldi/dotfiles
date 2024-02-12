@@ -38,6 +38,7 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("n", "]d", function() vim.diagnostic.goto_next() end, opts)
     vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+    vim.keymap.set("n", "<leader>fo", function() vim.lsp.buf.format({ timeout_ms=10000 }) end, opts)
 end)
 
 lsp.setup()
