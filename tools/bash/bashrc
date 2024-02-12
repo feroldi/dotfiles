@@ -57,3 +57,6 @@ fi
 
 # Activate autocompletion for sudo commands as well.
 complete -cf sudo
+
+# Make this tty the one for GPG.
+export GPG_TTY=$(tty)

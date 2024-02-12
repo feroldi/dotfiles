@@ -1,0 +1,15 @@
+# Source ~/.bashrc if there's any.
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+
+# Make neovim the default editor.
+export EDITOR=nvim VISUAL=nvim
+
+# Make a local bin directory, and append it to PATH.
+mkdir -p $HOME/.local/bin
+export PATH=$PATH:$HOME/.local/bin
+
+# Include rust's cargo binaries into PATH
+source "$HOME/.cargo/env"
+
+# Start X11 session.
+[[ -z "$DISPLAY" && "$XDG_VTNR" -eq 1 ]] && exec startx
