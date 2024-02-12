@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# Executes system's default `xinitrc`s.
+[ -d /etc/X11/xinit/xinitrc.d ] && {
+    for f in /etc/X11/xinit/xinitrc.d/?* ; do
+        [ -x "$f" ] && source "$f"
+    done
+    unset f
+}
+
+# Display resolution settings.
+xrandr --output DP-2 --mode 3440x1440 --rate 164.90
+
+# Load Xresources.
+xrdb -merge $HOME/.config/xresources/.Xresources
+
+# Get rid of the X-shaped cursor pointer.
+xsetroot -cursor_name left_ptr
+
+# Set wallpaper.
+hsetroot -tile $HOME/media/wallpapers/epe.png
+
+# Set Lshift + Rshift to toggle keyboard layout to US-international.
+setxkbmap -model pc105 -layout us,us -variant altgr-intl,intl -option grp:shifts_toggle,grp_led:caps,compose:menu
+
+# Keyboard keystrokes tool.
+sxhkd -c $HOME/.config/sxhkd/sxhkdrc & disown
+
+# Start up polybar.
+polybar custom 2>&1 | tee -a /tmp/polybar.log & disown
+
+# Window manager.
+exec bspwm
