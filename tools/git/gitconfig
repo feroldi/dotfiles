@@ -1,0 +1,22 @@
+[user]
+	name = Mário Feroldi
+	email = mferoldif@gmail.com
+	signingkey = MISSING
+[credential]
+	helper = cache --timeout=28800
+[gpg]
+	program = gpg2
+[rerere]
+	enabled = true
+[commit]
+	gpgsign = true
+[alias]
+	st = status
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+[remote "origin"]
+	prune = true
