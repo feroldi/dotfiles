@@ -29,5 +29,11 @@ sxhkd -c $HOME/.config/sxhkd/sxhkdrc & disown
 # Start up polybar.
 polybar custom 2>&1 | tee -a /tmp/polybar.log & disown
 
+# Start picom (composer).
+picom --config $HOME/.config/picom/picom.conf & disown
+
+# Disable DPMS and prevent screen from blanking
+xset s off -dpms
+
 # Window manager.
 exec bspwm

@@ -1,3 +1,7 @@
+# reset sxhkd state
+super + Escape
+  pkill -USR1 -x sxhkd
+
 # open terminal
 super + Return
   gnome-terminal
@@ -14,9 +18,13 @@ Print
 super + Print
   scrot --select --freeze --file %Y-%m-%d_%R:%S_screenshot.png --exec 'mv $f ~/media/screenshots/'
 
-# reset sxhkd state
-super + Escape
-  pkill -USR1 -x sxhkd
+# Raise and lower audio volume.
+XF86Audio{Raise,Lower}Volume
+  pamixer --{increase,decrease} 10
+
+# Toggle audio mute
+XF86AudioMute
+  pamixer --toggle-mute
 
 # alternate between the tiled and monocle layout
 super + m

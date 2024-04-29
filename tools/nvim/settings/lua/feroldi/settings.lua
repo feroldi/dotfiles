@@ -13,6 +13,8 @@ vim.opt.linebreak = true
 
 vim.opt.lazyredraw = true
 
+vim.opt.equalalways = false
+
 -- FIXME: Is this still needed?
 -- Required by LanguageClient-neovim for operations modifying multiple buffers like rename.
 vim.opt.laststatus = 2
