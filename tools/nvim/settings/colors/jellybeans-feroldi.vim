@@ -453,7 +453,7 @@ call s:X("TabLineFill","9098a0","","","",s:termBlack)
 call s:X("TabLineSel","000000","f0f0f0","italic,bold",s:termBlack,"White")
 
 " Auto-completion
-call s:X("Pmenu","ffffff","606060","","White",s:termBlack)
+call s:X("Pmenu","ffffff","101010","","White",s:termBlack)
 call s:X("PmenuSel","101010","eeeeee","",s:termBlack,"White")
 
 call s:X("Visual","","404040","","",s:termBlack)
@@ -461,15 +461,15 @@ call s:X("Cursor",s:background_color,"b0d0f0","","","")
 
 call s:X("LineNr","605958",s:background_color,"NONE",s:termBlack,"")
 call s:X("CursorLineNr","ccc5c4","","NONE","White","")
-call s:X("Comment","888888","","italic","Grey","")
+call s:X("Comment","888888","","","Grey","")
 call s:X("Todo","c7c7c7","","bold","White",s:termBlack)
 
-call s:X("StatusLine","000000","dddddd","italic","","White")
-call s:X("StatusLineNC","ffffff","403c41","italic","White","Black")
+call s:X("StatusLine","000000","dddddd","","","White")
+call s:X("StatusLineNC","ffffff","403c41","","White","Black")
 call s:X("VertSplit","777777","403c41","",s:termBlack,s:termBlack)
 call s:X("WildMenu","f0a0c0","302028","","Magenta","")
 
-call s:X("Folded","a0a8b0","384048","italic",s:termBlack,"")
+call s:X("Folded","a0a8b0","384048","",s:termBlack,"")
 call s:X("FoldColumn","535D66","1f1f1f","","",s:termBlack)
 call s:X("SignColumn","777777",s:background_color,"","",s:termBlack)
 call s:X("ColorColumn","","000000","","",s:termBlack)
@@ -502,7 +502,8 @@ call s:X("Search","f0a0c0","302028","underline","Magenta","")
 call s:X("Directory","dad085","","","Yellow","")
 call s:X("ErrorMsg","","902020","","","DarkRed")
 hi! link Error ErrorMsg
-hi! link MoreMsg Special
+hi! link MoreMsg Comment
+hi! link ModeMsg MoreMsg
 call s:X("Question","65C254","","","Green","")
 
 
@@ -528,7 +529,7 @@ call s:X("DiffText","8fbfdc","000000","reverse","Yellow","")
 " PHP
 
 hi! link phpFunctions Function
-call s:X("StorageClass","c59f6f","","","Red","")
+call s:X("StorageClass","ffb964","","","Yellow","")
 hi! link phpSuperglobal Identifier
 hi! link phpQuoteSingle StringDelimiter
 hi! link phpQuoteDouble StringDelimiter
@@ -653,6 +654,14 @@ call s:X("IndentGuidesEven","","1b1b1b","","","")
 
 hi! link TagListFileName Directory
 call s:X("PreciseJumpTarget","B9ED67","405026","","White","Green")
+
+" Neovim
+
+hi! WinSeparator guifg=#333333 guibg=#111111
+hi! DiagnosticError guifg=#cf6a4c
+hi! DiagnosticWarn  guifg=#fad07a
+hi! DiagnosticInfo  guifg=#777777
+hi! DiagnosticHint  guifg=#777777
 
 " Manual overrides for 256-color terminals. Dark colors auto-map badly.
 if !s:low_color
