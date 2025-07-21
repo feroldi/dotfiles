@@ -26,6 +26,10 @@ XF86Audio{Raise,Lower}Volume
 XF86AudioMute
   pamixer --toggle-mute
 
+# toggle polybar visibility
+super + p
+  polybar-toggle-vis.sh
+
 # alternate between the tiled and monocle layout
 super + m
   bspc desktop -l next
