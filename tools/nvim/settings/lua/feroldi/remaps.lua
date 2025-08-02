@@ -67,8 +67,3 @@ vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left>
 -- Nagivate to start and end of current line.
 vim.keymap.set("n", "H", "^")
 vim.keymap.set("n", "L", "$")
-
--- Format current buffer using LSP.
-vim.keymap.set("n", "<leader>f", function()
-    vim.lsp.buf.format()
-end)
