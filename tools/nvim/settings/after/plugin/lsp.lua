@@ -22,6 +22,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
           return vim.fn.pumvisible() == 1 and "<C-y>" or "<CR>"
       end, { expr = true, noremap = true })
 
+      vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end)
       vim.keymap.set("n", "<leader>fo", function() vim.lsp.buf.format({async = true}) end)
   end,
 })
