@@ -12,11 +12,11 @@ require("blink.cmp").setup({
     completion = {
         list = {
             selection = {
-                preselect = false
+                preselect = true
             }
         },
         menu = {
-            auto_show = false
+            auto_show = true
         },
     },
     cmdline = {

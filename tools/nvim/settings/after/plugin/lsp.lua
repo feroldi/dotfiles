@@ -7,6 +7,20 @@ vim.lsp.config("rust_analyzer", {
                 }
             }
         }
+    },
+    settings = {
+        ["rust-analyzer"] = {
+            check = {
+                extraArgs = {
+                    "--target-dir=target/analyzer",
+                }
+            },
+            server = {
+                extraEnv = {
+                    ["CARGO_TARGET_DIR"] = "target/analyzer",
+                }
+            }
+        }
     }
 })
 
