@@ -1,3 +1,3 @@
 #!/bin/sh
 
-sudo pacman -S noto-fonts noto-fonts-emoji noto-fonts-extra
+sudo pacman -S noto-fonts noto-fonts-emoji noto-fonts-extra ttf-jetbrains-mono
