@@ -9,7 +9,9 @@
 }
 
 # Display resolution settings.
-xrandr --output DP-2 --mode 3440x1440 --rate 164.90
+[ $(uname -n) = "robson" ] && {
+    xrandr --output DP-2 --mode 3440x1440 --rate 164.90
+}
 
 # Load Xresources.
 xrdb -merge $HOME/.config/xresources/.Xresources
