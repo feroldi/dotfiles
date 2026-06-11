@@ -1,3 +1,3 @@
 require("feroldi.settings")
-require("feroldi.packer")
+require("feroldi.packages")
 require("feroldi.remaps")

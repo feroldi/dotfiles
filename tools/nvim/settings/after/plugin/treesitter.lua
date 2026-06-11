@@ -2,7 +2,7 @@ for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
   vim.api.nvim_set_hl(0, group, {})
 end
 
-require("nvim-treesitter.configs").setup {
+require("nvim-treesitter").setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
   ensure_installed = { "typst" },
 
