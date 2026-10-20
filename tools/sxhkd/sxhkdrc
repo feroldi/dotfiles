@@ -4,7 +4,7 @@ super + Escape
 
 # open terminal
 super + Return
-  gnome-terminal
+  alacritty
 
 # open application launcher
 super + d
