@@ -2,7 +2,7 @@
 
 source ../installation-util.sh
 
-install_package bash zoxide
+install_package bash zoxide bash-completion
 
 cp bashrc $HOME/.bashrc
 cp bash_aliases $HOME/.bash_aliases
